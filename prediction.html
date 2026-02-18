@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiaCare Blood Sugar Prediction</title>
+  <link rel="stylesheet" href="prediction.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <a href="index.html" class="logo">DiaCare</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Prediction</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Predict Your Blood Sugar Level</h1>
+    <p>Fill in the details below to estimate your blood sugar trend.</p>
+  </section>
+
+  <!-- Prediction Form -->
+  <section class="form-section">
+    <form id="prediction-form">
+
+      <!-- User Info -->
+      <div class="card">
+        <h2>User Info</h2>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" min="0" max="120" required>
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="previous-bs">Previous Blood Sugar Level (mg/dL):</label>
+          <input type="number" id="previous-bs" required>
+        </div>
+        <div class="form-group">
+          <label>Any Illness Before?</label>
+          <select id="illness">
+            <option value="no">No</option>
+            <option value="mild">Mild</option>
+            <option value="moderate">Moderate</option>
+            <option value="severe">Severe</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Food & Diet -->
+      <div class="card">
+        <h2>Food & Diet (Note: If you are taking assesment before eating choose meal type : snack, carbohydrate : 0, and Gi : 0.3)</h2>
+        <div class="form-group">
+          <label for="meal-type">Meal Type:</label>
+          <select id="meal-type">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+          </select>
+        </div>
+        <h4>click <a href="./carb-calculator.html">here</a> to Calculate carbohydrate</h4>
+        <div class="form-group">
+          <label for="carbs">Carbohydrates (grams):</label>
+          <input type="number" id="carbs" min="0" max="700">
+        </div>
+        <div class="form-group">
+          <label for="gi">Glycemic Index (GI):</label>
+          <select id="gi">
+            <option value="1">High (1)</option>
+            <option value="0.6">Medium (0.6)</option>
+            <option value="0.3">Low (0.3)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Insulin & Medication -->
+      <div class="card">
+        <h2>Insulin & Medications</h2>
+        <div class="form-group">
+          <label>Did you take insulin?</label>
+          <select id="insulin-taken">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="insulin-units">Units of Insulin:</label>
+          <input type="number" id="insulin-units" min="0">
+        </div>
+        <div class="form-group">
+          <label>Did you take prescribed medicines?</label>
+          <select id="med-taken">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Physical Activity -->
+      <div class="card">
+        <h2>Physical Activity & Exercise</h2>
+        <div class="form-group">
+          <label for="activity-type">Activity Type:</label>
+          <select id="activity-type">
+            <option value="none">None</option>
+            <option value="light">Light Walking</option>
+            <option value="moderate">Moderate</option>
+            <option value="high">High Intensity</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="activity-duration">Duration (minutes):</label>
+          <input type="number" id="activity-duration" min="0" max="180">
+        </div>
+      </div>
+
+      <!-- Stress & Emotions -->
+      <div class="card">
+        <h2>Stress & Emotions</h2>
+        <h4>click <a href="./stress-calculator.html">here</a> to calculate stress level</h4>
+        <label for="stress-level">Stress Level (0–10): <span id="stress-value">5</span></label>
+        <input type="range" id="stress-level" min="0" max="10" value="5">
+      </div>
+
+      <!-- Hormonal Changes -->
+      <div class="card">
+        <h2>Hormonal Changes</h2>
+        <select id="hormonal">
+          <option value="none">None</option>
+          <option value="menstruation">Menstruation</option>
+          <option value="pregnancy">Pregnancy</option>
+          <option value="menopause">Menopause</option>
+        </select>
+      </div>
+
+      <!-- Dehydration & Heat -->
+      <div class="card">
+        <h2>Dehydration & Water Intake</h2>
+        <label for="water-intake">Water intake per day (cups):</label>
+        <input type="number" id="water-intake" min="0" max="20">
+        <label>Dehydration:</label>
+        <select id="dehydration">
+          <option value="none">None</option>
+          <option value="mild">Mild</option>
+          <option value="severe">Severe</option>
+        </select>
+      </div>
+
+      <!-- Alcohol -->
+      <div class="card">
+        <h2>Alcohol Intake</h2>
+        <label for="alcohol-qty">How much per week (units):</label>
+        <input type="number" id="alcohol-qty" min="0" max="50">
+      </div>
+
+      <!-- Sleep & Routine -->
+      <div class="card">
+        <h2>Sleep & Routine</h2>
+        <label for="sleep-hours">Sleep per night (hours):</label>
+        <input type="number" id="sleep-hours" min="0" max="24">
+        <label>Activity Routine:</label>
+        <select id="activity-routine">
+          <option value="active">Active</option>
+          <option value="sedentary">Sedentary</option>
+        </select>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="predict-btn">Calculate Blood Sugar</button>
+    </form>
+
+    <!-- Result -->
+    <div id="prediction-result" class="prediction-result">
+      <!-- Dynamic results will appear here -->
+    </div>
+  </section>
+
+  <script src="prediction.js"></script>
+</body>
+</html>

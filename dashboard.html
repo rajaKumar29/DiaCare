@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">MyDash</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Analytics</a>
+      <a href="#">Users</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <header class="topbar">
+      <h1>Dashboard</h1>
+      <div class="profile">👤</div>
+    </header>
+
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card">💰 Accuracy<br><span>99.9%</span></div>
+      <div class="card">👥 Users<br><span>1,240</span></div>
+      <div class="card">📦 Satisfied Patient<br><span>1,239</span></div>
+      <div class="card">⭐ Rating<br><span>4.9</span></div>
+    </section>
+
+    <!-- Chart -->
+    <section class="chart-section">
+      <h2>Overview</h2>
+      <canvas id="chart"></canvas>
+    </section>
+
+  </main>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

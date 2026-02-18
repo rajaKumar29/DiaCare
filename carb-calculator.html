@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiaCare Carb Calculator</title>
+  <link rel="stylesheet" href="carb-calculator.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <a href="index.html" class="logo">DiaCare</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Carb Calculator</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <h1>Carbohydrate & Blood Sugar Calculator</h1>
+    <p>Choose your meal and quantity to see estimated blood sugar impact.</p>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="card">
+      <h2>Meal Selection</h2>
+      <div class="form-group">
+        <label for="meal-category">Meal Category:</label>
+        <select id="meal-category">
+          <option value="">-- Select Category --</option>
+          <option value="staple">Staple Carbs</option>
+          <option value="legumes">Legumes / Protein</option>
+          <option value="vegetables">Vegetables</option>
+          <option value="fruits">Fruits</option>
+          <option value="snacks">Snacks / Sweets</option>
+          <option value="dairy">Dairy & Fats</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="meal-item">Meal Item:</label>
+        <select id="meal-item">
+          <option value="">-- Select Meal --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity / Portion:</label>
+        <input type="number" id="quantity" min="0" placeholder="Enter number of portions">
+      </div>
+
+      <button id="calculate-btn">Calculate ΔBS</button>
+    </div>
+
+    <!-- Result Section -->
+    <div class="result-section">
+      <h2>Estimated Blood Sugar Spike</h2>
+      <div class="spike-container">
+        <div class="spike-bar" id="spike-bar"></div>
+      </div>
+      <div id="spike-value"></div>
+    </div>
+  </section>
+
+  <script src="carb-calculator.js"></script>
+</body>
+</html>

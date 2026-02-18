@@ -1,0 +1,131 @@
+/* ===== General Styles ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f5f9ff, #e0f0ff);
+  color: #0b2a6b;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8%;
+  background: #0b5ed7;
+  color: white;
+}
+
+.nav-bar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar .nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  color: #4a5a7a;
+  font-size: 18px;
+}
+
+.form-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #0b2a6b;
+  font-size: 22px;
+}
+
+.form-group, .card label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="number"], select, input[type="range"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cfd8e0;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+input[type="range"] {
+  accent-color: #0b5ed7;
+}
+
+#predict-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#0b5ed7,#4f8cff);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#predict-btn:hover {
+  transform: translateY(-3px);
+}
+
+.prediction-result {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+  color: #0b2a6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-bar .nav-links {
+    margin-top: 10px;
+  }
+}

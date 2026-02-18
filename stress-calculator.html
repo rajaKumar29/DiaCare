@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiaCare Stress Level Calculator</title>
+  <link rel="stylesheet" href="stress-calculator.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <a href="index.html" class="logo">DiaCare</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Stress Calculator</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Stress Level Calculator</h1>
+    <p>Evaluate your stress level based on lifestyle, sleep, work, and emotional health.</p>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="card">
+      <h2>Factors Affecting Stress</h2>
+
+      <!-- Sleep -->
+      <div class="form-group">
+        <label for="sleep-hours">Sleep Hours per Night:</label>
+        <input type="range" id="sleep-hours" min="0" max="12" value="7">
+        <span id="sleep-value">7</span> hours
+      </div>
+
+      <!-- Workload -->
+      <div class="form-group">
+        <label for="workload">Workload:</label>
+        <select id="workload">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <!-- Emotional Health -->
+      <div class="form-group">
+        <label for="emotions">Emotional Health:</label>
+        <select id="emotions">
+          <option value="calm">Calm / Relaxed</option>
+          <option value="moderate">Moderate Stress</option>
+          <option value="high">High Stress / Anxious</option>
+        </select>
+      </div>
+
+      <!-- Physical Health -->
+      <div class="form-group">
+        <label for="physical">Physical Activity per Week (hrs):</label>
+        <input type="number" id="physical" min="0" max="20" value="3">
+      </div>
+
+      <!-- Social Support -->
+      <div class="form-group">
+        <label for="social">Social Support:</label>
+        <select id="social">
+          <option value="high">High</option>
+          <option value="medium" selected>Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <!-- Chronic Conditions -->
+      <div class="form-group">
+        <label for="chronic">Chronic Conditions Affecting Stress:</label>
+        <select id="chronic">
+          <option value="none">None</option>
+          <option value="mild">Mild</option>
+          <option value="moderate">Moderate</option>
+          <option value="severe">Severe</option>
+        </select>
+      </div>
+
+      <button id="calculate-btn">Calculate Stress Level</button>
+    </div>
+
+    <!-- Result Section -->
+    <div class="result-section">
+      <h2>Your Estimated Stress Level</h2>
+      <div class="stress-bar-container">
+        <div class="stress-bar" id="stress-bar"></div>
+      </div>
+      <div id="stress-value-result"></div>
+    </div>
+  </section>
+
+  <script src="stress-calculator.js"></script>
+</body>
+</html>

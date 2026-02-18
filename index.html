@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dia Care - Smart Diabetes Monitoring</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4c3f0e8e2b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Preloader -->
+<div id="preloader">
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<style>
+body {
+  background-color: rgb(190, 237, 255);
+  background-size: cover;        /* makes image fill screen */
+  background-repeat: no-repeat;  /* prevents tiling */
+  background-position: center;   /* centers image */
+  height: 100vh;
+  margin: 0;
+}
+</style>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Dia<span>Care</span></div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="./platform.html">Platform</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="./dashboard.html">Dashboard</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="toggle-mode" id="modeToggle">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="login-btn"><a href="./login.html"><span style="color:white">Login</span></a></button>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <div class="hero-text">
+    <h1>Predict & Control Your Blood Sugar with Intelligence</h1>
+
+    <p>
+      Dia Care is a smart clinical platform designed for diabetic patients and
+      healthcare professionals. Our system evaluates lifestyle, medication,
+      nutrition, stress, and activity to estimate blood glucose trends and
+      support healthier decisions every day.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="./prediction.html" class="primary-btn">Start Prediction</a>
+      <button class="secondary-btn"><a href="./learnmore.html">Learn More</a></button>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://static.wixstatic.com/media/88aac0_437fab849c4e4cd68b2a2af5e7537d6b~mv2.png" alt="Medical Illustration">
+  </div>
+</section>
+<!-- SECTION 2 : PLATFORM FACTORS -->
+<section class="platform">
+
+  <div class="section-header">
+    <h2>Clinical Factors That Influence Blood Sugar</h2>
+    <p>
+      Dia Care evaluates multiple physiological and lifestyle parameters to
+      estimate glucose patterns and support informed medical decisions.
+    </p>
+  </div>
+
+  <div class="platform-cards">
+
+    <div class="card">
+      <i class="fa-solid fa-utensils"></i>
+      <h3>Nutrition & Diet</h3>
+      <p>Food composition, meal timing, and carbohydrate balance directly affect glucose response.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-syringe"></i>
+      <h3>Medication & Insulin</h3>
+      <p>Dosage, timing, and adherence to diabetes medication are analyzed for prediction accuracy.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-person-running"></i>
+      <h3>Physical Activity</h3>
+      <p>Exercise intensity and daily movement influence insulin sensitivity and glucose utilization.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-brain"></i>
+      <h3>Stress & Emotions</h3>
+      <p>Hormonal stress responses can elevate blood sugar and alter metabolic balance.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-bed"></i>
+      <h3>Sleep & Routine</h3>
+      <p>Sleep quality and circadian rhythm significantly impact glucose regulation.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-temperature-high"></i>
+      <h3>Illness & Hydration</h3>
+      <p>Infection, dehydration, and heat stress can disrupt normal glucose stability.</p>
+    </div>
+
+  </div>
+</section>
+<!-- SECTION 6 : SMART MEDICAL MONITORING -->
+<section class="smart-monitoring">
+
+  <div class="monitoring-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="monitoring-text fade-left">
+      <h2>AI-Driven Smart Glucose Monitoring</h2>
+
+      <p>
+        DiaCare continuously evaluates lifestyle, medication,
+        nutrition, stress, and physiological signals to deliver
+        precise blood-glucose intelligence for patients and
+        healthcare professionals.
+      </p>
+
+      <ul class="monitoring-points">
+        <li><i class="fa-solid fa-heart-pulse"></i> Predictive glucose trend analysis</li>
+        <li><i class="fa-solid fa-user-doctor"></i> Doctor-ready clinical reports</li>
+        <li><i class="fa-solid fa-chart-line"></i> Real-time lifestyle impact tracking</li>
+        <li><i class="fa-solid fa-shield-heart"></i> Secure medical-grade insights</li>
+      </ul>
+
+      <a href="#" class="monitoring-btn">Explore Intelligence</a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="monitoring-image fade-right">
+      <img src="https://static.wixstatic.com/media/88aac0_f6337c83b67b45488e5bf8430d7d19de~mv2.png"
+           alt="DiaCare AI Glucose Monitoring Illustration">
+    </div>
+
+  </div>
+
+  <!-- glowing background -->
+  <div class="monitoring-glow"></div>
+
+</section>
+<!-- SECTION 3 : TRUST & DASHBOARD -->
+<section class="trust">
+
+  <div class="trust-container">
+
+    <!-- LEFT : TESTIMONIALS -->
+    <div class="testimonials fade-in">
+
+      <h2>Trusted by Doctors & Patients</h2>
+
+      <div class="testimonial-card">
+        <p>
+          “Dia Care provides meaningful glucose trend insights that help
+          patients understand how lifestyle choices affect diabetes control.
+          It is a valuable clinical support tool.”
+        </p>
+        <h4>Dr. Ananya Mehta</h4>
+        <span>Endocrinologist</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “After using Dia Care regularly, I became more aware of how food,
+          sleep, and activity influence my sugar levels. It truly changed my
+          daily routine.”
+        </p>
+        <h4>Rahul Sharma</h4>
+        <span>Type-2 Diabetes Patient</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT : DASHBOARD PREVIEW -->
+    <div class="dashboard-preview fade-in">
+
+      <h2>Smart Glucose Insights Dashboard</h2>
+
+      <div class="dashboard-card">
+
+        <div class="glucose-value">
+          <p>Current Estimate</p>
+          <h3>128 mg/dL</h3>
+          <span class="trend up">Stable Trend ↑</span>
+        </div>
+
+        <div class="glucose-bars">
+          <div style="height: 60%"></div>
+          <div style="height: 80%"></div>
+          <div style="height: 55%"></div>
+          <div style="height: 70%"></div>
+          <div style="height: 65%"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- SECTION 4 : HOW IT WORKS -->
+<section class="how-it-works" id ="how-it-works">
+
+  <div class="section-header">
+    <h2>How Dia Care Supports Smarter Diabetes Decisions</h2>
+    <p>
+      Our platform combines clinical knowledge, lifestyle analysis, and
+      intelligent modeling to provide meaningful glucose insights for
+      patients and healthcare professionals.
+    </p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Enter Health & Lifestyle Data</h3>
+      <p>
+        Users provide key medical and daily routine information such as diet,
+        medication, sleep, and activity patterns.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Clinical Intelligence Processing</h3>
+      <p>
+        Dia Care evaluates multiple physiological factors using structured
+        medical logic to estimate glucose behavior.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Actionable Health Insights</h3>
+      <p>
+        Clear trends and guidance help patients and doctors make informed
+        lifestyle and treatment decisions.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+<!-- SECTION 5 : FEATURES -->
+<section class="features">
+
+  <div class="section-header">
+    <h2>Why Choose Dia Care</h2>
+    <p>
+      Designed for real-world diabetes management with a focus on clarity,
+      reliability, and clinical usefulness.
+    </p>
+  </div>
+
+  <div class="feature-grid">
+
+    <div class="feature">
+      <h3>Clinical-Focused Design</h3>
+      <p>Built to support both patients and healthcare professionals.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Lifestyle-Aware Insights</h3>
+      <p>Evaluates nutrition, activity, sleep, stress, and medication together.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Simple & Understandable</h3>
+      <p>Clear glucose trends without complex medical confusion.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Future-Ready Intelligence</h3>
+      <p>Expandable toward AI-driven diabetes monitoring and reporting.</p>
+    </div>
+
+  </div>
+
+</section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left: Logo & About -->
+    <div class="footer-section fade-up">
+      <h2 class="logo">HealthPredict</h2>
+      <p>Your smart companion for early health prediction and better lifestyle decisions.</p>
+    </div>
+
+    <!-- Center: Quick Links -->
+    <div class="footer-section fade-up delay-1">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./feature.html">Features</a></li>
+        <li><a href="./prediction.html">Prediction</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right: Social Links -->
+    <div class="footer-section fade-up delay-2">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">💼</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom fade-in">
+    <p>© 2026 HealthPredict. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    // small delay for smooth feel
+    setTimeout(() => {
+      preloader.classList.add("hide");
+    }, 800);
+  });
+</script>
+<!-- CHATBOT -->
+<div id="chatbot">
+  <div class="chat-header">
+    <span>DiaCare Assistant</span>
+    <button id="chat-close">&times;</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="bot-message">Hello! I'm your DiaCare assistant. How can I help you today?</div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chat-input" placeholder="Type your message...">
+    <button id="chat-send">Send</button>
+  </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<button id="chat-toggle">💬</button>
+
+</body>
+</html>

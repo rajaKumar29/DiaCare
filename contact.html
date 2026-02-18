@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you!</p>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="successMsg"></p>
+    </form>
+  </div>
+
+  <!-- JS file -->
+  <script src="contact.js"></script>
+</body>
+</html>
